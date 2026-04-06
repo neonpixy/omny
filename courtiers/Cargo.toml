@@ -1,0 +1,73 @@
+[package]
+name = "courtiers"
+version = "0.1.0"
+edition = "2021"
+description = "The Castle's courtiers — one per ABC, managed by the Chancellor"
+
+[dependencies]
+# The Chancellor's prerogative — shared authority types
+prerogative = { path = "../prerogative" }
+
+# Equipment — Phone handler registration, ModuleCatalog
+equipment = { path = "../../Omninet/Equipment" }
+
+# Crown — identity (Soul, Keyring, Profile)
+crown = { path = "../../Omninet/Crown" }
+
+# Content pipeline
+ideas = { path = "../../Omninet/Ideas" }
+vault = { path = "../../Omninet/Vault" }
+hall = { path = "../../Omninet/Hall" }
+sentinal = { path = "../../Omninet/Sentinal" }
+
+# Rendering + code projection
+magic = { path = "../../Omninet/Magic" }
+regalia = { path = "../../Omninet/Regalia" }
+
+# AI cognition
+advisor = { path = "../../Omninet/Advisor" }
+
+# HTTP client for inference providers (Claude API, Ollama, LM Studio)
+reqwest = { version = "0.12", features = ["json", "rustls-tls"], default-features = false }
+
+# Governance Court — Kingdom, Polity, Bulwark, Jail
+kingdom = { path = "../../Omninet/Kingdom" }
+polity = { path = "../../Omninet/Polity" }
+bulwark = { path = "../../Omninet/Bulwark" }
+jail = { path = "../../Omninet/Jail" }
+
+# Royal Staff crates
+fortune = { path = "../../Omninet/Fortune" }
+lingo = { path = "../../Omninet/Lingo" }
+nexus = { path = "../../Omninet/Nexus" }
+yoke = { path = "../../Omninet/Yoke" }
+oracle = { path = "../../Omninet/Oracle" }
+quest = { path = "../../Omninet/Quest" }
+zeitgeist = { path = "../../Omninet/Zeitgeist" }
+undercroft = { path = "../../Omninet/Undercroft" }
+
+# Globe — OmniEvent for Envoy
+globe = { path = "../../Omninet/Globe", default-features = false }
+omnibus = { path = "../../Omninet/World/Digital/Omnibus", default-features = false, features = ["upnp"] }
+tower = { path = "../../Omninet/World/Digital/Tower" }
+
+# Shared utilities
+x = { path = "../../Omninet/X" }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+base64 = "0.22"
+
+# UUIDs
+uuid = { version = "1", features = ["v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+# Async (Sage inference)
+tokio = { version = "1", features = ["sync"] }
+
+# Config persistence (config.set / config.reload handlers)
+toml = "0.8"
+
+# Logging
+log = "0.4"

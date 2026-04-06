@@ -1,0 +1,15 @@
+{
+  "name": "@castle",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "orb": "npx tsx orb/sync.ts",
+    "pipeline": "cd ../Library && npm run generate && cd ../Omny && npx tsx orb/sync.ts"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.2"
+  }
+}

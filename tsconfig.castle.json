@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["throne/node_modules/@types"],
+    "types": ["node"],
+    "paths": {
+      "solid-js": ["throne/node_modules/solid-js"],
+      "solid-js/*": ["throne/node_modules/solid-js/*"],
+      "@omnidea/net": ["../Library/sdk/src/index.ts"],
+      "@omnidea/ui": ["../Library/ui/src/lib/index.ts"],
+      "@omnidea/ui/*": ["../Library/ui/src/lib/*"],
+      "@omnidea/crystal": ["../Library/crystal/src/index.ts"],
+      "@omnidea/editor": ["../Library/editor/src/index.ts"],
+      "@omnidea/fx": ["../Library/fx/src/lib/index.ts"],
+      "@vizier": ["vizier/index.ts"]
+    }
+  },
+  "include": ["court", "cornerstone", "crownsguard", "sceptor", "attendants"]
+}
